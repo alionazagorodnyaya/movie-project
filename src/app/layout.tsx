@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -7,20 +9,20 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<header>
-					<h2>KinoKino</h2>
+					<div>KinoKino</div>
 					<nav>
 						<ul>
 							<li>
-								<a href="/">Main Page</a>
+								<Link href={"/"}>Main Page</Link>
 							</li>
 							<li>
-								<a href="/information">Info Page</a>
+								<Link href={"/information"}>Info Page</Link>
 							</li>
 							<li>
-								<a href="/search">Search</a>
+								<Link href={"/search"}>Search</Link>
 							</li>
 							<li>
-								<a href="/library">Library</a>
+								<Link href={"/library"}>Library</Link>
 							</li>
 						</ul>
 					</nav>
