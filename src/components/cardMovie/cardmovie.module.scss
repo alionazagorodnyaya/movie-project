@@ -1,0 +1,14 @@
+.card {
+	width: 200px;
+	&__image {
+		width: 200px;
+		height: 300px;
+	}
+	&__title {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	&__genre {
+		font-weight: bold;
+	}
+}

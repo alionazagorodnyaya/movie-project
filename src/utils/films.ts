@@ -111,6 +111,6 @@ export function getRndTitles() {
 		movies[i] = movies[randomIdx];
 		movies[randomIdx] = movie;
 	}
-	console.log(movies.slice(0, 6));
+
 	return movies.slice(0, 6);
 }

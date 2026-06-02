@@ -1,23 +1,5 @@
 .movies {
-	color: #82ad51;
-	background-color: #2d3c1c;
-	&__list {
-		display: flex;
+	display: flex;
 
-		justify-content: space-between;
-	}
-	&__card {
-		width: 200px;
-	}
-	&__image {
-		width: 200px;
-		height: 300px;
-	}
-	&__title {
-		font-size: 20px;
-		font-weight: bold;
-	}
-	&__genre {
-		font-weight: bold;
-	}
+	justify-content: space-between;
 }
