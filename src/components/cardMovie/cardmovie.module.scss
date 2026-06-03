@@ -1,5 +1,6 @@
 .card {
 	width: 200px;
+	text-decoration: none;
 	&__image {
 		width: 200px;
 		height: 300px;
@@ -11,4 +12,8 @@
 	&__genre {
 		font-weight: bold;
 	}
+}
+.link {
+	text-decoration: none;
+	color: #2d3c1c;
 }

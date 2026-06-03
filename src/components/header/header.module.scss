@@ -1,0 +1,23 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__logo {
+		font-size: 40px;
+		font-weight: bold;
+		color: #2d3c1c;
+		img {
+			width: 50px;
+		}
+	}
+	&__list {
+		display: flex;
+		gap: 40px;
+		list-style: none;
+		a {
+			text-decoration: none;
+			color: #2d3c1c;
+			font-weight: bold;
+		}
+	}
+}

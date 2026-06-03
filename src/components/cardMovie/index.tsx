@@ -8,7 +8,10 @@ interface IProps {
 
 export default function CardMovie({ movie }: IProps) {
 	return (
-		<Link href={`/films/${movie.Title.toLowerCase()}`}>
+		<Link
+			href={`/films/${movie.Title.toLowerCase()}`}
+			className={styles.link}
+		>
 			<div className={styles.card}>
 				<img className={styles.card__image} src={movie.Poster}></img>
 				<p className={styles.card__title}>{movie.Title}</p>

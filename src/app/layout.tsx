@@ -1,5 +1,6 @@
-import Link from "next/link";
-
+import Header from "@/components/header";
+import Banner from "@/components/banner";
+import styles from "./layout.module.scss";
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -7,26 +8,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>
-				<header>
-					<div>KinoKino</div>
-					<nav>
-						<ul>
-							<li>
-								<Link href={"/"}>Main Page</Link>
-							</li>
-							<li>
-								<Link href={"/information"}>Info Page</Link>
-							</li>
-							<li>
-								<Link href={"/search"}>Search</Link>
-							</li>
-							<li>
-								<Link href={"/library"}>Library</Link>
-							</li>
-						</ul>
-					</nav>
-				</header>
+			<body className={styles.body}>
+				<Header></Header>
+
 				<main>{children}</main>
 				<footer></footer>
 			</body>

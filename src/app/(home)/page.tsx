@@ -3,6 +3,8 @@ import styles from "./page.module.scss";
 import { getRndTitles } from "@/utils/films";
 import CardMovie from "@/components/cardMovie";
 import { IMovie } from "@/types/movie.type";
+import Banner from "@/components/banner";
+import Search from "@/components/search";
 
 async function getMovie(title: string): Promise<IMovie> {
 	const response = await fetch(
@@ -26,8 +28,8 @@ export default async function HomePage() {
 
 	return (
 		<>
-			<p>Home</p>
-			<p>Random Movies</p>
+			<Banner></Banner>
+			<Search></Search>
 			<div className={styles.movies}>
 				{moviesRnd.map((movie) => (
 					<CardMovie movie={movie} />
