@@ -10,7 +10,6 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={styles.body}>
 				<Header></Header>
-
 				<main>{children}</main>
 				<footer></footer>
 			</body>
