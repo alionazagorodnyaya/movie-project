@@ -1,0 +1,23 @@
+@use "../styles/colors" as c;
+
+@mixin container {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+@mixin gradient {
+	background: linear-gradient(c.$background, c.$background-dark);
+}
+@mixin shadow {
+	box-shadow: 0 15px 30px c.$shadow;
+}
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}

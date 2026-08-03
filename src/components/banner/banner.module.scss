@@ -1,28 +1,30 @@
+@use "../../styles/mixin" as m;
+@use "../../styles/colors" as c;
+
 .banner {
-	display: flex;
-	flex-direction: column;
+	@include m.container;
+	@include m.gradient;
+	@include m.flex-center;
+	@include m.flex-column;
 	margin: 50px;
 	padding: 50px;
-	text-align: center;
-	background: linear-gradient(#bed4a4, #b1afa2);
+
 	border-radius: 24px;
-	border: 20px dashed black;
+	border: 20px dashed c.$black;
 	&__title {
 		font-size: 56px;
 		font-weight: 800;
-		color: #2d3c1c;
+		color: c.$primary;
 	}
 
 	&__text {
 		font-size: 20px;
 		margin-top: 10px;
-		color: #4c542c;
+		color: c.$secondary;
 	}
 
 	&__image {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include m.flex-center;
 		gap: 18px;
 		margin-bottom: 45px;
 
@@ -31,20 +33,19 @@
 			height: 55px;
 			padding: 10px;
 			border-radius: 30px;
-			background-color: rgba(255, 255, 255, 0.35);
+			background-color: c.$white-transparent;
 		}
 	}
 
 	&__poster {
-		display: flex;
-		justify-content: center;
+		@include m.flex-center;
 		gap: 28px;
 
 		img {
 			width: 180px;
 			height: 270px;
 			border-radius: 18px;
-			box-shadow: 0 15px 30px rgba(45, 60, 28, 0.35);
+			@include m.shadow;
 		}
 	}
 
@@ -58,5 +59,84 @@
 
 	.banner__poster img:nth-child(3) {
 		transform: rotate(6deg);
+	}
+}
+@media (max-width: 2860px) {
+	.banner {
+		margin: 50 auto;
+	}
+}
+@media (max-width: 1600px) {
+	.banner {
+		margin: 50px;
+	}
+}
+@media (max-width: 792px) {
+	.banner {
+		&__title {
+			font-size: 45px;
+		}
+		&__image {
+			gap: 10px;
+			img {
+				width: 40px;
+				height: 25px;
+			}
+		}
+		&__poster {
+			gap: 20px;
+			img {
+				width: 150px;
+				height: 220px;
+			}
+		}
+	}
+}
+@media (max-width: 671px) {
+	.banner {
+		&__title {
+			font-size: 45px;
+		}
+		&__image {
+			gap: 10px;
+			img {
+				width: 40px;
+				height: 25px;
+			}
+		}
+		&__poster {
+			gap: 20px;
+			img {
+				width: 100px;
+				height: 150px;
+			}
+		}
+	}
+}
+@media (max-width: 518px) {
+	.banner {
+		&__title {
+			font-size: 40px;
+		}
+		&__image {
+			gap: 10px;
+			img {
+				width: 40px;
+				height: 25px;
+				&:nth-child(n + 4) {
+					display: none;
+				}
+			}
+		}
+		&__poster {
+			gap: 20px;
+			img {
+				width: 120px;
+				height: 150px;
+				&:nth-child(n + 3) {
+					display: none;
+				}
+			}
+		}
 	}
 }

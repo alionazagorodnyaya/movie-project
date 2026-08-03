@@ -1,11 +1,15 @@
+@use "../../styles/colors" as c;
+@use "../../styles/mixin" as m;
+
 .search {
-	display: flex;
-	flex-direction: column;
+	@include m.gradient;
+	@include m.flex-column;
+
 	width: 500px;
-	text-align: center;
+
 	margin: 0 auto;
-	background: linear-gradient(#bed4a4, #b1afa2);
-	border: 10px dashed #2d3c1c;
+
+	border: 10px dashed c.$primary;
 	border-radius: 50px;
 	margin-bottom: 60px;
 	align-items: center;
@@ -13,13 +17,13 @@
 	&__title {
 		margin-bottom: 20px;
 		font-size: 50px;
-		color: #2d3c1c;
+		color: c.$primary;
 	}
 
 	&__text {
 		font-size: 18px;
 		line-height: 1.5;
-		color: #4c542c;
+		color: c.$secondary;
 		margin-top: 10px;
 	}
 
@@ -27,14 +31,34 @@
 		padding: 15px 30px;
 		margin-bottom: 10px;
 		border-radius: 30px;
-		background-color: #2d3c1c;
-		color: #bed4a4;
+		background-color: c.$primary;
+		color: c.$background;
 		text-decoration: none;
 		width: 100px;
 	}
 
 	.search__btn:hover {
-		background-color: #4c542c;
+		background-color: c.$secondary;
 		transform: translateY(-2px);
+	}
+}
+@media (max-width: 710px) {
+	.search {
+		width: 400px;
+		height: 300px;
+		padding: 10px;
+		&__title {
+			font-size: 38px;
+		}
+	}
+}
+@media (max-width: 530px) {
+	.search {
+		width: 300px;
+		height: 300px;
+		padding: 20px;
+		&__title {
+			font-size: 28px;
+		}
 	}
 }

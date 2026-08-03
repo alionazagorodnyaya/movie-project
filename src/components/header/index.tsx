@@ -22,6 +22,7 @@ export default function Header() {
 					</li>
 				</ul>
 			</nav>
+			<img src="/burger.svg" className={styles.header__burger}></img>
 		</header>
 	);
 }
