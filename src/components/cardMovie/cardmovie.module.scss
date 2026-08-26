@@ -1,9 +1,9 @@
 .card {
-	width: 200px;
+	width: 180px;
 	text-decoration: none;
 	&__image {
-		width: 200px;
-		height: 300px;
+		width: 180px;
+		height: 270px;
 	}
 	&__title {
 		font-size: 20px;
@@ -16,4 +16,5 @@
 .link {
 	text-decoration: none;
 	color: #2d3c1c;
+	flex: 0 0 180px;
 }
